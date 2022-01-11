@@ -24,7 +24,7 @@ class DM extends CI_Controller
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/topbar', $data);
-        $this->load->view('DM/index', $data);
+        $this->load->view('dm/index', $data);
         $this->load->view('templates/footer');
     }
 
@@ -47,7 +47,7 @@ class DM extends CI_Controller
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/topbar', $data);
-        $this->load->view('DM/datasiswa', $data);
+        $this->load->view('dm/datasiswa', $data);
         $this->load->view('templates/footer');
     }
 
@@ -63,7 +63,7 @@ class DM extends CI_Controller
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/topbar', $data);
-        $this->load->view('DM/databobot', $data);
+        $this->load->view('dm/databobot', $data);
         $this->load->view('templates/footer');
     }
 
@@ -80,11 +80,11 @@ class DM extends CI_Controller
         if ($kriteria['bobot'] == 100) {
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
             Data bobot kriteria berhasil diedit!</div>');
-            redirect('DM/databobot');
+            redirect('dm/databobot');
         } else {
             $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
             Jumlah Bobot TIDAK BOLEH Lebih atau Kurang Dari 100! Silahkan Perbaiki Nilai Bobotnya.</div>');
-            redirect('DM/databobot');
+            redirect('dm/databobot');
         }
     }
 
@@ -119,7 +119,7 @@ class DM extends CI_Controller
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/topbar', $data);
-        $this->load->view('DM/perhitungan', $data);
+        $this->load->view('dm/perhitungan', $data);
         $this->load->view('templates/footer');
     }
 
@@ -146,7 +146,7 @@ class DM extends CI_Controller
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/topbar', $data);
-        $this->load->view('DM/laporan', $data);
+        $this->load->view('dm/laporan', $data);
         $this->load->view('templates/footer');
     }
 }

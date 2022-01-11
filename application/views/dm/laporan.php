@@ -112,7 +112,7 @@ function JarakIplus($aplus, $bob)
 
                 <form action="" method="GET">
                     <div class="col-md-12 ml-auto">
-                        <?php echo form_open('DM/perhitungan') ?>
+                        <?php echo form_open('dm/perhitungan') ?>
                         <div class="input-group mb-2">
                             <select name="jurusan_id" id="jurusan_id" class="form-control">
                                 <option value="">Jurusan</option>
