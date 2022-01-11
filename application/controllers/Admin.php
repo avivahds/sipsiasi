@@ -15,26 +15,11 @@ class Admin extends CI_Controller
         $data['title'] = 'Dashboard';
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
-        $db = (array)get_instance()->db;
-        $selectdb = new mysqli('localhost', $db['username'], $db['password'], $db['database']);
-        $data_jurusan = mysqli_query($selectdb, "SELECT * FROM data_jurusan");
-        $jumlah_jurusan = mysqli_num_rows($data_jurusan);
-        $data_jurusan = $jumlah_jurusan;
-        $data['jumlah_jurusan'] = $data_jurusan;
+        $data['jumlah_jurusan'] = $this->db->get('data_jurusan')->num_rows();
 
-        $db = (array)get_instance()->db;
-        $selectdb = new mysqli('localhost', $db['username'], $db['password'], $db['database']);
-        $data_kriteria = mysqli_query($selectdb, "SELECT * FROM data_kriteria");
-        $jumlah_kriteria = mysqli_num_rows($data_kriteria);
-        $data_kriteria = $jumlah_kriteria;
-        $data['jumlah_kriteria'] = $data_kriteria;
+        $data['jumlah_kriteria'] = $this->db->get('data_kriteria')->num_rows();
 
-        $db = (array)get_instance()->db;
-        $selectdb = new mysqli('localhost', $db['username'], $db['password'], $db['database']);
-        $data_siswa = mysqli_query($selectdb, "SELECT * FROM data_siswa_berprestasi");
-        $jumlah_siswa = mysqli_num_rows($data_siswa);
-        $data_siswa = $jumlah_siswa;
-        $data['jumlah_siswa'] = $data_siswa;
+        $data['jumlah_siswa'] = $this->db->get('data_siswa_berprestasi')->num_rows();
 
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
