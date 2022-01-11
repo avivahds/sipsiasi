@@ -19,17 +19,12 @@ class DM extends CI_Controller
 
         $data['jumlah_kriteria'] = $this->db->get('data_kriteria')->num_rows();
 
-        // $db = (array)get_instance()->db;
-        // $selectdb = new mysqli('localhost', $db['username'], $db['password'], $db['database']);
-        // $data_siswa = mysqli_query($selectdb, "SELECT * FROM data_siswa_berprestasi");
-        // $jumlah_siswa = mysqli_num_rows($data_siswa);
-        // $data_siswa = $jumlah_siswa;
         $data['jumlah_siswa'] = $this->db->get('data_siswa_berprestasi')->num_rows();
 
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/topbar', $data);
-        $this->load->view('dm/index', $data);
+        $this->load->view('DM/index', $data);
         $this->load->view('templates/footer');
     }
 
@@ -52,7 +47,7 @@ class DM extends CI_Controller
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/topbar', $data);
-        $this->load->view('dm/datasiswa', $data);
+        $this->load->view('DM/datasiswa', $data);
         $this->load->view('templates/footer');
     }
 
@@ -68,7 +63,7 @@ class DM extends CI_Controller
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/topbar', $data);
-        $this->load->view('dm/databobot', $data);
+        $this->load->view('DM/databobot', $data);
         $this->load->view('templates/footer');
     }
 
@@ -85,11 +80,11 @@ class DM extends CI_Controller
         if ($kriteria['bobot'] == 100) {
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
             Data bobot kriteria berhasil diedit!</div>');
-            redirect('dm/databobot');
+            redirect('DM/databobot');
         } else {
             $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
             Jumlah Bobot TIDAK BOLEH Lebih atau Kurang Dari 100! Silahkan Perbaiki Nilai Bobotnya.</div>');
-            redirect('dm/databobot');
+            redirect('DM/databobot');
         }
     }
 
@@ -124,7 +119,7 @@ class DM extends CI_Controller
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/topbar', $data);
-        $this->load->view('dm/perhitungan', $data);
+        $this->load->view('DM/perhitungan', $data);
         $this->load->view('templates/footer');
     }
 
@@ -151,7 +146,7 @@ class DM extends CI_Controller
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/topbar', $data);
-        $this->load->view('dm/laporan', $data);
+        $this->load->view('DM/laporan', $data);
         $this->load->view('templates/footer');
     }
 }

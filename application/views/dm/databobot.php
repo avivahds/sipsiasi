@@ -70,7 +70,7 @@
                 </div>
 
                 <?php echo validation_errors(); ?>
-                <?php echo form_open('dm/editbobot/' . $db1['id']); ?>
+                <?php echo form_open('DM/editbobot/' . $db1['id']); ?>
                 <div class="modal-body">
                     <div class="form-group">
                         <input type="text" class="form-control" id="kriteria" name="kriteria" placeholder="Nama Kriteria" value="<?php echo $db1['kriteria']; ?>">
