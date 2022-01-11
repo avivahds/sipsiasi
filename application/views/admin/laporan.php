@@ -207,10 +207,10 @@ function JarakIplus($aplus, $bob)
                             foreach ($alternatif as $alt) :
 
                                 $NormalisasiBobot[$no - 1] = array(
-                                    $MatrikNormalisasi[$no - 1][0] * $W1,
-                                    $MatrikNormalisasi[$no - 1][1] * $W2,
-                                    $MatrikNormalisasi[$no - 1][2] * $W3,
-                                    $MatrikNormalisasi[$no - 1][3] * $W4
+                                    $MatrikNormalisasi[$no - 1][0] * $bobotsatu,
+                                    $MatrikNormalisasi[$no - 1][1] * $bobotdua,
+                                    $MatrikNormalisasi[$no - 1][2] * $bobottiga,
+                                    $MatrikNormalisasi[$no - 1][3] * $bobotempat
                                 );
                             ?>
 
