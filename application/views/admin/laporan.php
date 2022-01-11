@@ -1,9 +1,57 @@
 <?php
 
-$W1    = 0.3;
-$W2    = 0.25;
-$W3    = 0.2;
-$W4    = 0.25;
+//Bobot
+function bobotsatu()
+{
+    $db = (array)get_instance()->db;
+    // $selectdb = new mysqli('localhost', $db['username'], $db['password'], $db['database']);
+    $selectdb = new mysqli('zeth-db.cf6dtysfd4y8.us-east-1.rds.amazonaws.com', $db['username'], $db['password'], $db['database']);
+
+    $bobot1 = mysqli_query($selectdb, "SELECT * FROM data_kriteria where id = 1");
+    while ($databobot = mysqli_fetch_array($bobot1)) {
+        $hasilbobot1 = $databobot['bobot'] / 100;
+    }
+    return $hasilbobot1;
+}
+
+function bobotdua()
+{
+    $db = (array)get_instance()->db;
+    // $selectdb = new mysqli('localhost', $db['username'], $db['password'], $db['database']);
+    $selectdb = new mysqli('zeth-db.cf6dtysfd4y8.us-east-1.rds.amazonaws.com', $db['username'], $db['password'], $db['database']);
+
+    $bobot2 = mysqli_query($selectdb, "SELECT * FROM data_kriteria where id = 2");
+    while ($databobot = mysqli_fetch_array($bobot2)) {
+        $hasilbobot2 = $databobot['bobot'] / 100;
+    }
+    return $hasilbobot2;
+}
+
+function bobottiga()
+{
+    $db = (array)get_instance()->db;
+    // $selectdb = new mysqli('localhost', $db['username'], $db['password'], $db['database']);
+    $selectdb = new mysqli('zeth-db.cf6dtysfd4y8.us-east-1.rds.amazonaws.com', $db['username'], $db['password'], $db['database']);
+
+    $bobot3 = mysqli_query($selectdb, "SELECT * FROM data_kriteria where id = 3");
+    while ($databobot = mysqli_fetch_array($bobot3)) {
+        $hasilbobot3 = $databobot['bobot'] / 100;
+    }
+    return $hasilbobot3;
+}
+
+function bobotempat()
+{
+    $db = (array)get_instance()->db;
+    // $selectdb = new mysqli('localhost', $db['username'], $db['password'], $db['database']);
+    $selectdb = new mysqli('zeth-db.cf6dtysfd4y8.us-east-1.rds.amazonaws.com', $db['username'], $db['password'], $db['database']);
+
+    $bobot4 = mysqli_query($selectdb, "SELECT * FROM data_kriteria where id = 4");
+    while ($databobot = mysqli_fetch_array($bobot4)) {
+        $hasilbobot4 = $databobot['bobot'] / 100;
+    }
+    return $hasilbobot4;
+}
 
 //Pembagi Normalisasi
 function pembagiNM($matrik)
