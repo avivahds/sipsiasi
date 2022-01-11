@@ -4,7 +4,8 @@
 function bobotsatu()
 {
     $db = (array)get_instance()->db;
-    $selectdb = new mysqli('localhost', $db['username'], $db['password'], $db['database']);
+    // $selectdb = new mysqli('localhost', $db['username'], $db['password'], $db['database']);
+    $selectdb = new mysqli('zeth-db.cf6dtysfd4y8.us-east-1.rds.amazonaws.com', $db['username'], $db['password'], $db['database']);
 
     $bobot1 = mysqli_query($selectdb, "SELECT * FROM data_kriteria where id = 1");
     while ($databobot = mysqli_fetch_array($bobot1)) {
@@ -16,7 +17,8 @@ function bobotsatu()
 function bobotdua()
 {
     $db = (array)get_instance()->db;
-    $selectdb = new mysqli('localhost', $db['username'], $db['password'], $db['database']);
+    // $selectdb = new mysqli('localhost', $db['username'], $db['password'], $db['database']);
+    $selectdb = new mysqli('zeth-db.cf6dtysfd4y8.us-east-1.rds.amazonaws.com', $db['username'], $db['password'], $db['database']);
 
     $bobot2 = mysqli_query($selectdb, "SELECT * FROM data_kriteria where id = 2");
     while ($databobot = mysqli_fetch_array($bobot2)) {
@@ -28,7 +30,8 @@ function bobotdua()
 function bobottiga()
 {
     $db = (array)get_instance()->db;
-    $selectdb = new mysqli('localhost', $db['username'], $db['password'], $db['database']);
+    // $selectdb = new mysqli('localhost', $db['username'], $db['password'], $db['database']);
+    $selectdb = new mysqli('zeth-db.cf6dtysfd4y8.us-east-1.rds.amazonaws.com', $db['username'], $db['password'], $db['database']);
 
     $bobot3 = mysqli_query($selectdb, "SELECT * FROM data_kriteria where id = 3");
     while ($databobot = mysqli_fetch_array($bobot3)) {
@@ -40,7 +43,8 @@ function bobottiga()
 function bobotempat()
 {
     $db = (array)get_instance()->db;
-    $selectdb = new mysqli('localhost', $db['username'], $db['password'], $db['database']);
+    // $selectdb = new mysqli('localhost', $db['username'], $db['password'], $db['database']);
+    $selectdb = new mysqli('zeth-db.cf6dtysfd4y8.us-east-1.rds.amazonaws.com', $db['username'], $db['password'], $db['database']);
 
     $bobot4 = mysqli_query($selectdb, "SELECT * FROM data_kriteria where id = 4");
     while ($databobot = mysqli_fetch_array($bobot4)) {
@@ -484,7 +488,8 @@ function JarakIplus($aplus, $bob)
 
                                         <?php
                                         $db = (array)get_instance()->db;
-                                        $selectdb = new mysqli('localhost', $db['username'], $db['password'], $db['database']);
+                                        // $selectdb = new mysqli('localhost', $db['username'], $db['password'], $db['database']);
+                                        $selectdb = new mysqli('zeth-db.cf6dtysfd4y8.us-east-1.rds.amazonaws.com', $db['username'], $db['password'], $db['database']);
 
                                         $testmax = rsort($nilaiV);
                                         for ($i = 0; $i < count($nilaiV); $i++) {
