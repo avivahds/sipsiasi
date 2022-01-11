@@ -203,6 +203,10 @@ function JarakIplus($aplus, $bob)
                             <?php
                             $no = 1;
                             $pembagiNM = pembagiNM($Matrik);
+                            $bobotsatu = bobotsatu();
+                            $bobotdua = bobotdua();
+                            $bobottiga = bobottiga();
+                            $bobotempat = bobotempat();
 
                             foreach ($alternatif as $alt) :
 
