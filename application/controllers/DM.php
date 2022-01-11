@@ -80,11 +80,11 @@ class DM extends CI_Controller
         if ($kriteria['bobot'] == 100) {
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
             Data bobot kriteria berhasil diedit!</div>');
-            redirect('dm/databobot');
+            redirect('DM/databobot');
         } else {
             $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
             Jumlah Bobot TIDAK BOLEH Lebih atau Kurang Dari 100! Silahkan Perbaiki Nilai Bobotnya.</div>');
-            redirect('dm/databobot');
+            redirect('DM/databobot');
         }
     }
 
