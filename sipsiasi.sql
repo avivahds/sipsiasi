@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 09 Des 2021 pada 09.52
+-- Waktu pembuatan: 11 Jan 2022 pada 09.04
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.4.1
 
@@ -321,7 +321,7 @@ CREATE TABLE `user_sub_menu` (
 
 INSERT INTO `user_sub_menu` (`id`, `menu_id`, `title`, `url`, `icon`, `is_active`) VALUES
 (1, 1, 'Dashboard', 'admin', 'fas fa-fw fa-tachometer-alt', 1),
-(2, 2, 'Dashboard', 'user', 'fas fa-fw fa-tachometer-alt', 1),
+(2, 2, 'Dashboard', 'DM', 'fas fa-fw fa-tachometer-alt', 1),
 (4, 3, 'Menu Management', 'menu', 'fas fa-fw fa-folder', 1),
 (5, 3, 'Submenu Management', 'menu/submenu', 'fas fa-fw fa-folder-open', 1),
 (8, 1, 'Kelola Data User', 'admin/datauser', 'fas fa-fw fa-users', 1),
@@ -329,11 +329,11 @@ INSERT INTO `user_sub_menu` (`id`, `menu_id`, `title`, `url`, `icon`, `is_active
 (10, 1, 'Kelola Data Kriteria', 'admin/datakriteria', 'fas fa-fw fa-clipboard-check', 1),
 (11, 1, 'Kelola Data Nilai Kriteria', 'admin/datanilaikriteria', 'fas fa-fw fa-list-ol', 1),
 (12, 1, 'Kelola Data Siswa Berprestasi', 'admin/datasiswa', 'fas fa-fw fa-user-graduate', 1),
-(13, 2, 'Data Siswa Berprestasi', 'dm/datasiswa', 'fas fa-fw fa-user-tie', 1),
-(14, 2, 'Kelola Bobot Kriteria', 'dm/databobot', 'fas fa-fw fa-list-ol', 1),
-(15, 2, 'Perhitungan', 'dm/perhitungan', 'fas  fa-fw fa-square-root-alt', 1),
+(13, 2, 'Data Siswa Berprestasi', 'DM/datasiswa', 'fas fa-fw fa-user-tie', 1),
+(14, 2, 'Kelola Bobot Kriteria', 'DM/databobot', 'fas fa-fw fa-list-ol', 1),
+(15, 2, 'Perhitungan', 'DM/perhitungan', 'fas  fa-fw fa-square-root-alt', 1),
 (16, 1, 'Laporan', 'admin/laporan', 'fas fa-fw fa-file-alt', 1),
-(17, 2, 'Laporan', 'dm/laporan', 'fas fa-fw fa-file-alt', 1);
+(17, 2, 'Laporan', 'DM/laporan', 'fas fa-fw fa-file-alt', 1);
 
 --
 -- Indexes for dumped tables
