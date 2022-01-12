@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 11 Jan 2022 pada 09.04
+-- Waktu pembuatan: 12 Jan 2022 pada 02.40
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.4.1
 
@@ -225,7 +225,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `name`, `email`, `image`, `password`, `role_id`, `is_active`, `date_created`) VALUES
-(21, 'Avivah', 'avivah.sisfo@student.untan.ac.id', 0, '$2y$10$mO/ihHrKm3hyK1opmIYzze8PttI6eFueLslXnU5Ja0Sw3SkAaStQ6', 1, 1, 1634107977),
+(21, 'Avivah', 'pipeh@gmail.com', 0, '$2y$10$EGNK5XaDV9DnZ2Vnh8dffuFHfZiKhQkCluCQ1W2aW9UBHzjiuvOKy', 1, 1, 1641951395),
 (23, 'Bintang', 'bintang@gmail.com', 0, '$2y$10$EGNK5XaDV9DnZ2Vnh8dffuFHfZiKhQkCluCQ1W2aW9UBHzjiuvOKy', 2, 1, 1634191991);
 
 -- --------------------------------------------------------
@@ -455,7 +455,7 @@ ALTER TABLE `tahun_akademik`
 -- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT untuk tabel `user_access_menu`

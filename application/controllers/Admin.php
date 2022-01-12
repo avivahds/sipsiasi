@@ -87,7 +87,7 @@ class Admin extends CI_Controller
 
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
             Data user berhasil ditambahkan!</div>');
-            redirect('admin/datauser');
+            redirect('Admin/datauser');
         }
     }
 
@@ -97,7 +97,7 @@ class Admin extends CI_Controller
         $this->User_model->editdatauser($id);
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
             Data user berhasil diedit!</div>');
-        redirect('admin/datauser');
+        redirect('Admin/datauser');
     }
 
     public function hapusdatauser($id)
@@ -106,7 +106,7 @@ class Admin extends CI_Controller
         $this->User_model->hapusdatauser($id);
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
             Data user berhasil dihapus!</div>');
-        redirect('admin/datauser');
+        redirect('Admin/datauser');
     }
 
 
@@ -132,7 +132,7 @@ class Admin extends CI_Controller
 
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
             Data jurusan berhasil ditambahkan!</div>');
-            redirect('admin/datajurusan');
+            redirect('Admin/datajurusan');
         }
     }
 
@@ -159,7 +159,7 @@ class Admin extends CI_Controller
         $this->Jurusan_model->editdatajurusan($id);
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
             Data jurusan berhasil diedit!</div>');
-        redirect('admin/datajurusan');
+        redirect('Admin/datajurusan');
     }
 
     public function hapusdatajurusan($id)
@@ -168,7 +168,7 @@ class Admin extends CI_Controller
         $this->Jurusan_model->hapusdatajurusan($id);
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
             Data jurusan berhasil dihapus!</div>');
-        redirect('admin/datajurusan');
+        redirect('Admin/datajurusan');
     }
 
 
@@ -194,7 +194,7 @@ class Admin extends CI_Controller
 
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
             Data kriteria berhasil ditambahkan!</div>');
-            redirect('admin/datakriteria');
+            redirect('Admin/datakriteria');
         }
     }
 
@@ -204,7 +204,7 @@ class Admin extends CI_Controller
         $this->Kriteria_model->editdatakriteria($id);
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
             Data kriteria berhasil diedit!</div>');
-        redirect('admin/datakriteria');
+        redirect('Admin/datakriteria');
     }
 
     public function hapusdatakriteria($id)
@@ -213,7 +213,7 @@ class Admin extends CI_Controller
         $this->Kriteria_model->hapusdatakriteria($id);
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
             Data kriteria berhasil dihapus!</div>');
-        redirect('admin/datakriteria');
+        redirect('Admin/datakriteria');
     }
 
 
@@ -249,7 +249,7 @@ class Admin extends CI_Controller
 
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
             Data nilai kriteria berhasil ditambahkan!</div>');
-            redirect('admin/datanilaikriteria');
+            redirect('Admin/datanilaikriteria');
         }
     }
 
@@ -264,7 +264,7 @@ class Admin extends CI_Controller
 
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
             Data Nilai kriteria berhasil diedit!</div>');
-        redirect('admin/datanilaikriteria');
+        redirect('Admin/datanilaikriteria');
     }
 
     public function hapusdatanilaikriteria($id)
@@ -273,7 +273,7 @@ class Admin extends CI_Controller
         $this->NilaiKriteria_model->hapusdatanilaikriteria($id);
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
             Data nilai kriteria berhasil dihapus!</div>');
-        redirect('admin/datanilaikriteria');
+        redirect('Admin/datanilaikriteria');
     }
 
 
@@ -368,7 +368,7 @@ class Admin extends CI_Controller
 
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
             Data siswa berhasil ditambahkan!</div>');
-            redirect('admin/datasiswa');
+            redirect('Admin/datasiswa');
         }
     }
 
@@ -378,7 +378,7 @@ class Admin extends CI_Controller
         $this->Siswa_model->editdatasiswa($id);
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
             Data siswa berprestasi berhasil diedit!</div>');
-        redirect('admin/datasiswa');
+        redirect('Admin/datasiswa');
     }
 
     public function hapusdatasiswa($id)
@@ -387,7 +387,7 @@ class Admin extends CI_Controller
         $this->Siswa_model->hapusdatasiswa($id);
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
             Data siswa berhasil dihapus!</div>');
-        redirect('admin/datasiswa');
+        redirect('Admin/datasiswa');
     }
 
 
