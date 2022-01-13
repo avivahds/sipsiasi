@@ -148,7 +148,7 @@
                         <?= form_error('email', '<small class="text-danger pl-3">', '</small>'); ?>
                     </div>
 
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <div class="form-group">
                             <input type="password" class="form-control" id="password1" placeholder="Password" name="password1" value="<?php echo $du1['password']; ?>">
                             <?= form_error('password1', '<small class="text-danger pl-3">', '</small>'); ?>
@@ -156,7 +156,7 @@
                         <div class=" form-group">
                             <input type="password" class="form-control form-control-user" id="password2" placeholder="Repeat Password" name="password2" value="<?php echo $du1['password']; ?>">
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="form-group">
                         <select class="form-control" name="role_id" id="role_id">

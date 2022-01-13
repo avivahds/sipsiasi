@@ -18,7 +18,7 @@ class User_model extends CI_Model
             'name' => htmlspecialchars($this->input->post('name', true)),
             'email' => htmlspecialchars($this->input->post('email', true)),
             'image' => 'default.png',
-            'password' => password_hash($this->input->post('password1'), PASSWORD_DEFAULT),
+            // 'password' => password_hash($this->input->post('password1'), PASSWORD_DEFAULT),
             'role_id' => $this->input->post('role_id', true),
             // 'role_id' => 2,
             'is_active' => 1,
