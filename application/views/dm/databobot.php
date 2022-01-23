@@ -77,7 +77,7 @@
                         <?= form_error('kriteria', '<small class="text-danger pl-3">', '</small>'); ?>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="bobot" name="bobot" placeholder="Bobot Kriteria" value="<?php echo $db1['bobot']; ?>">
+                        <input type="number" class="form-control" id="bobot" name="bobot" placeholder="Bobot Kriteria" value="<?php echo $db1['bobot']; ?>">
                         <?= form_error('bobot', '<small class="text-danger pl-3">', '</small>'); ?>
                     </div>
 

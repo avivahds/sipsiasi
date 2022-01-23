@@ -56,12 +56,12 @@ class Admin extends CI_Controller
         $data['dataUser'] = $this->role->getDataUser();
         $data['role'] = $this->db->get('user_role')->result_array();
 
-        $this->form_validation->set_rules('name', 'Name', 'required');
+        $this->form_validation->set_rules('name', 'Nama', 'required');
         $this->form_validation->set_rules('email', 'Email', 'required');
         $this->form_validation->set_rules('role_id', 'Role', 'required');
         $this->form_validation->set_rules('password1', 'Password', 'required|trim|min_length[5]|matches[password2]', [
-            'matches' => 'Password dont match!',
-            'min_length' => 'Password too short!'
+            'matches' => 'Password tidak cocok!',
+            'min_length' => 'Password terlalu pendek!'
         ]);
         $this->form_validation->set_rules('password2', 'Password', 'required|trim|min_length[5]|matches[password1]');
 
@@ -119,7 +119,7 @@ class Admin extends CI_Controller
 
         $data['jurusan'] = $this->db->get('data_jurusan')->result_array();
 
-        $this->form_validation->set_rules('jurusan', 'Jurusan', 'required');
+        $this->form_validation->set_rules('jurusan', 'Nama Jurusan', 'required');
 
         if ($this->form_validation->run() == false) {
             $this->load->view('templates/header', $data);
@@ -181,7 +181,7 @@ class Admin extends CI_Controller
 
         $data['kriteria'] = $this->db->get('data_kriteria')->result_array();
 
-        $this->form_validation->set_rules('kriteria', 'Kriteria', 'required');
+        $this->form_validation->set_rules('kriteria', 'Nama Kriteria', 'required');
 
         if ($this->form_validation->run() == false) {
             $this->load->view('templates/header', $data);
@@ -229,7 +229,7 @@ class Admin extends CI_Controller
         $data['nilaiKriteria'] = $this->kriteria->getSubKriteria();
         $data['kriteria'] = $this->db->get('data_kriteria')->result_array();
 
-        $this->form_validation->set_rules('kriteria_id', 'Kriteria', 'required');
+        $this->form_validation->set_rules('kriteria_id', 'Nama Kriteria', 'required');
         $this->form_validation->set_rules('rentang_nilai', 'Rentang Nilai', 'required');
         $this->form_validation->set_rules('nilai_kriteria', 'Nilai', 'required');
 
@@ -338,10 +338,13 @@ class Admin extends CI_Controller
         }
 
         $this->form_validation->set_rules('nama_siswa', 'Nama Siswa', 'required');
-        $this->form_validation->set_rules('jurusan_id', 'Jurusan', 'required');
-        $this->form_validation->set_rules('tahun_id', 'Tahun', 'required');
+        $this->form_validation->set_rules('jurusan_id', 'Nama Jurusan', 'required');
+        $this->form_validation->set_rules('tahun_id', 'Tahun Akademik', 'required');
         $this->form_validation->set_rules('kelas_id', 'Kelas', 'required');
         $this->form_validation->set_rules('nilai_rapot', 'Nilai Rapot', 'required');
+        $this->form_validation->set_rules('nilai_absensi', 'Nilai Absensi', 'required');
+        $this->form_validation->set_rules('nilai_ekskul', 'Nilai Ekskul', 'required');
+        $this->form_validation->set_rules('nilai_kepribadian', 'Nilai Kepribadian', 'required');
 
         if ($this->form_validation->run() == false) {
             $this->load->view('templates/header', $data);

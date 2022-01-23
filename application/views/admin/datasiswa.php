@@ -146,22 +146,22 @@
                     </div>
 
                     <div class="form-group">
-                        <input type="text" class="form-control" id="nilai_rapot" name="nilai_rapot" placeholder="Nilai rapot" value="<?= set_value('nilai_rapot'); ?>">
+                        <input type="number" class="form-control" id="nilai_rapot" name="nilai_rapot" placeholder="Nilai rapot" value="<?= set_value('nilai_rapot'); ?>">
                         <?= form_error('nilai_rapot', '<small class="text-danger pl-3">', '</small>'); ?>
                     </div>
 
                     <div class="form-group">
-                        <input type="text" class="form-control" id="nilai_absensi" name="nilai_absensi" placeholder="Nilai Absensi" value="<?= set_value('nilai_absensi'); ?>">
+                        <input type="number" class="form-control" id="nilai_absensi" name="nilai_absensi" placeholder="Nilai Absensi" value="<?= set_value('nilai_absensi'); ?>">
                         <?= form_error('nilai_absensi', '<small class="text-danger pl-3">', '</small>'); ?>
                     </div>
 
                     <div class="form-group">
-                        <input type="text" class="form-control" id="nilai_ekskul" name="nilai_ekskul" placeholder="Nilai Ekstrakurikuler" value="<?= set_value('nilai_ekskul'); ?>">
+                        <input type="number" class="form-control" id="nilai_ekskul" name="nilai_ekskul" placeholder="Nilai Ekstrakurikuler" value="<?= set_value('nilai_ekskul'); ?>">
                         <?= form_error('nilai_ekskul', '<small class="text-danger pl-3">', '</small>'); ?>
                     </div>
 
                     <div class="form-group">
-                        <input type="text" class="form-control" id="nilai_kepribadian" name="nilai_kepribadian" placeholder="Nilai Kepribadian" value="<?= set_value('nilai_kepribadian'); ?>">
+                        <input type="number" class="form-control" id="nilai_kepribadian" name="nilai_kepribadian" placeholder="Nilai Kepribadian" value="<?= set_value('nilai_kepribadian'); ?>">
                         <?= form_error('nilai_kepribadian', '<small class="text-danger pl-3">', '</small>'); ?>
                     </div>
 
@@ -237,22 +237,22 @@
                     </div>
 
                     <div class="form-group">
-                        <input type="text" class="form-control" id="nilai_rapot" name="nilai_rapot" placeholder="Nilai Rapot" value="<?php echo $ds1['nilai_rapot']; ?>">
+                        <input type="number" class="form-control" id="nilai_rapot" name="nilai_rapot" placeholder="Nilai Rapot" value="<?php echo $ds1['nilai_rapot']; ?>">
                         <?= form_error('nilai_rapot', '<small class="text-danger pl-3">', '</small>'); ?>
                     </div>
 
                     <div class="form-group">
-                        <input type="text" class="form-control" id="nilai_absensi" name="nilai_absensi" placeholder="Nilai Absensi" value="<?php echo $ds1['nilai_absensi']; ?>">
+                        <input type="number" class="form-control" id="nilai_absensi" name="nilai_absensi" placeholder="Nilai Absensi" value="<?php echo $ds1['nilai_absensi']; ?>">
                         <?= form_error('nilai_absensi', '<small class="text-danger pl-3">', '</small>'); ?>
                     </div>
 
                     <div class="form-group">
-                        <input type="text" class="form-control" id="nilai_ekskul" name="nilai_ekskul" placeholder="Nilai ekstrakurikuler" value="<?php echo $ds1['nilai_ekskul']; ?>">
+                        <input type="number" class="form-control" id="nilai_ekskul" name="nilai_ekskul" placeholder="Nilai ekstrakurikuler" value="<?php echo $ds1['nilai_ekskul']; ?>">
                         <?= form_error('nilai_ekskul', '<small class="text-danger pl-3">', '</small>'); ?>
                     </div>
 
                     <div class="form-group">
-                        <input type="text" class="form-control" id="nilai_kepribadian" name="nilai_kepribadian" placeholder="Nilai Kepribadian" value="<?php echo $ds1['nilai_kepribadian']; ?>">
+                        <input type="number" class="form-control" id="nilai_kepribadian" name="nilai_kepribadian" placeholder="Nilai Kepribadian" value="<?php echo $ds1['nilai_kepribadian']; ?>">
                         <?= form_error('nilai_kepribadian', '<small class="text-danger pl-3">', '</small>'); ?>
                     </div>
 

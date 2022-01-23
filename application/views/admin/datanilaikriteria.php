@@ -104,7 +104,7 @@
                         <!-- <select name="nilaikriteria" id="nilaikriteria" class="form-control">
                         </select> -->
 
-                        <input type="text" class="form-control" id="nilai_kriteria" name="nilai_kriteria" placeholder="Nilai" value="<?= set_value('nilai'); ?>">
+                        <input type="number" class="form-control" id="nilai_kriteria" name="nilai_kriteria" placeholder="Nilai" value="<?= set_value('nilai'); ?>">
                         <?= form_error('nilai_kriteria', '<small class="text-danger pl-3">', '</small>'); ?>
                     </div>
 
