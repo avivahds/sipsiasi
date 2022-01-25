@@ -464,27 +464,6 @@ function JarakIplus($aplus, $bob)
 
                                     <tbody>
 
-                                        <!-- <?php
-                                                $no = 1;
-                                                $nilaiV = array();
-                                                foreach ($alternatif as $alt) :
-                                                    $nilaiV[$no - 1] = $Dmin[$no - 1] / ($Dmin[$no - 1] + $Dplus[$no - 1]);
-                                                    $no++;
-                                                endforeach;
-                                                $nilai = $nilaiV;
-                                                $alt = $alternatif;
-                                                $combine = array_combine($nilai, $alt);
-                                                $no = 0;
-                                                rsort($combine);
-                                                foreach ($combine as $com => $value) { ?>
-                                            <tr>
-                                                <td style="text-align: center;" <?= $no++; ?> </td>
-                                                <td style="text-align: center;" <?= $value; ?> </td>
-                                                <td style="text-align: center;" <?= $com; ?> </td>
-                                            </tr>
-                                        <?php }
-                                        ?> -->
-
 
                                         <?php
                                         $db = (array)get_instance()->db;

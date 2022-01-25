@@ -256,6 +256,10 @@ function JarakIplus($aplus, $bob)
                                         <th scope="col">Nama</th>
                                         <th scope="col">Jurusan</th>
                                         <th scope="col">Kelas</th>
+                                        <th scope="col">Nilai Rapot</th>
+                                        <th scope="col">Nilai Absensi</th>
+                                        <th scope="col">Nilai Nilai Ekstrakurikuler</th>
+                                        <th scope="col">Nilai Kepribadian</th>
                                         <th scope="col">Nilai</th>
                                     </tr>
                                 </thead>
@@ -276,6 +280,10 @@ function JarakIplus($aplus, $bob)
                                             <td> <?= $ds['nama_siswa']; ?> </td>
                                             <td style="text-align: center;"> <?= $ds['nama_jurusan']; ?> </td>
                                             <td style="text-align: center;"> <?= $ds['kelas']; ?> </td>
+                                            <td style="text-align: center;"> <?= $ds['nilai_rapot']; ?> </td>
+                                            <td style="text-align: center;"> <?= $ds['nilai_absensi']; ?> </td>
+                                            <td style="text-align: center;"> <?= $ds['nilai_ekskul']; ?> </td>
+                                            <td style="text-align: center;"> <?= $ds['nilai_kepribadian']; ?> </td>
                                             <td style="text-align: center;"> <?= $nilaiV[$no - 1]; ?> </td>
                                         </tr>
                                     <?php
@@ -283,6 +291,68 @@ function JarakIplus($aplus, $bob)
                                     endforeach; ?>
                                 </tbody>
                             </table>
+
+                            <!-- <?php
+                                    $no = 1;
+
+                                    $nilaiV = array();
+                                    rsort($nilaiV);
+                                    foreach ($alternatif as $ds) :
+                                        $nilaiV[$no - 1] = $Dmin[$no - 1] / ($Dmin[$no - 1] + $Dplus[$no - 1]);
+                                    ?>
+                            <?php
+                                        $no++;
+                                    endforeach; ?>
+
+                            <table class="table table-bordered" id="pdf" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr style="text-align: center;">
+                                        <th scope="col">No.</th>
+                                        <th scope="col">Tahun Akademik</th>
+                                        <th scope="col">Nama</th>
+                                        <th scope="col">Jurusan</th>
+                                        <th scope="col">Kelas</th>
+                                        <th scope="col">Nilai Rapot</th>
+                                        <th scope="col">Nilai Absensi</th>
+                                        <th scope="col">Nilai Nilai Ekstrakurikuler</th>
+                                        <th scope="col">Nilai Kepribadian</th>
+                                        <th scope="col">Nilai</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <?php
+                                    $db = (array)get_instance()->db;
+                                    $selectdb = new mysqli('localhost', $db['username'], $db['password'], $db['database']);
+                                    // $selectdb = new mysqli('zeth-db.cf6dtysfd4y8.us-east-1.rds.amazonaws.com', $db['username'], $db['password'], $db['database']);
+
+                                    $testmax = rsort($nilaiV);
+                                    for ($i = 0; $i < count($nilaiV); $i++) {
+                                        if ($nilaiV[$i] == $testmax) {
+                                            $query = mysqli_query($selectdb, "SELECT * FROM data_siswa_berprestasi where id = $i+1");
+                                    ?>
+
+                                            <tr>
+                                                <th scope="row" style="text-align: center;"> <?= ($i + 1); ?> </th>
+                                                <td style="text-align: center;"> <?= $ds['tahun']; ?> </td>
+                                                <?php while ($alternatif = mysqli_fetch_array($query)) { ?>
+                                                    <td> <?= $alternatif['nama_siswa']; ?> </td>
+                                                    <td style="text-align: center;"> <?= $ds['nama_jurusan']; ?> </td>
+                                                    <td style="text-align: center;"> <?= $ds['kelas']; ?> </td>
+                                                    <td style="text-align: center;"> <?= $ds['nilai_rapot']; ?> </td>
+                                                    <td style="text-align: center;"> <?= $ds['nilai_absensi']; ?> </td>
+                                                    <td style="text-align: center;"> <?= $ds['nilai_ekskul']; ?> </td>
+                                                    <td style="text-align: center;"> <?= $ds['nilai_kepribadian']; ?> </td>
+                                                    <td style="text-align: center;"> <?= $nilaiV[$i]; ?> </td>
+                                            </tr>
+                                <?php
+                                                }
+                                            }
+                                        } ?>
+                                </tbody>
+                            </table>
+                            </tbody>
+                            </table> -->
 
                         </div>
                     </div>
